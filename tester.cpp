@@ -82,9 +82,10 @@ public:
   void print_stats(std::ofstream& out)
   {
     for(size_t i = 0; i < address.size(); i++) {
-      std::cout << "address[" << i <<"] " << "= 0x" << std::hex << address[i] << std::dec <<  std::endl;
-      std::cout << "mnemonic[" << i <<"] " << "= "  << mnemonic[i] << std::dec << std::endl;
-      std::cout << "op_str[" << i <<"] " << "= " << op_str[i] << "\n" << std::endl;
+      //std::cout << "address[" << i <<"] " << "= 0x" << std::hex << address[i] << std::dec <<  std::endl;
+      //std::cout << "mnemonic[" << i <<"] " << "= "  << mnemonic[i] std::endl;
+      //std::cout << "op_str[" << i <<"] " << "= " << op_str[i] << "\n" << std::endl;
+      std::cout << "0x" << std::hex << address[i] << std::dec << " "  << mnemonic[i] << " " << op_str[i] << std::endl;
     }
     uint64_t total_inst = 0;
     for (int i = 0; i < osd.get_n(); i++) {
